@@ -1,3 +1,14 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología.
+ * Grado en Ingeniería Informática
+ * Informática Básica 2025-2026
+ * 
+ * @file main.cc
+ * @author alu0101742830@ull.edu.es
+ * @date En 27 2026
+ * @bug There are no known bugs
+**/
 #include<iostream>
 #include<string>
 #include<cmath>
