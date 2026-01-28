@@ -78,3 +78,12 @@ To use the solver run the program and write the ecuation as an argument in quote
 ```
 
 The ecuation may not contain x (unknown variables), we want it to return a number.
+
+> Each system (translator and solver) are contained in one function.
+> For the translator is the function translate(string) in the archive
+> function_detection.cc
+> For the solver is the function solve(string) in the archive solve.cc
+> To use them in your own code you must include the files in your main
+> file. The translator returns a string and the solver a real number.
+
+
