@@ -8,8 +8,16 @@
 std::string transalate(std::string ecuation){
   int lenght = ecuation.size();
   std::string result;
+  int cont{0};
 
   for(int i{0}; i<lenght; ++i){
+
+    if(ecuation[i] == '(')
+      cont ++;
+
+    if (ecuation[i] == ')')
+      cont --;
+
     if(ecuation[i] == '1' || ecuation[i] == '2' || ecuation[i] == '3' || ecuation[i] == '4' || ecuation[i] == '5' || ecuation[i] == '6' || ecuation[i] == '7' || ecuation[i] == '8' || ecuation[i] == '9' || ecuation[i] == '0')
       result.push_back(ecuation[i]); //push_back numbers
 
@@ -72,11 +80,20 @@ std::string transalate(std::string ecuation){
       result.push_back('L');
       i+=2;
     }
-
+    
     else { //in case of unknown symbols
       std::cerr << "syntax error \n";
       return "";
     }
+  }
+
+  if (cont != 0){ //check for oppened bracket
+    std::cerr << "syntax error \n";
+    if(cont < 0)
+      std::cerr << "Missing ( \n";
+    else
+      std::cerr << "Missing ) \n";
+    return "";
   }
   return result;
 }

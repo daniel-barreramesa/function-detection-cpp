@@ -30,3 +30,24 @@ This is the list of translations performed by the program:
 | sqrt | r | square root |
 | cbrt | R | cubic root |
 | pi | p | number pi |
+
+### Instructions to use the translator:
+
+Copy the repository to your local machine. 
+```
+~/$ git clone git@github.com:/daniel-barreramesa/function-detection-cpp.git
+```
+
+Enter the src/ directory and compile the program
+
+```
+~/src$ g++ main.cc
+```
+
+To use the translator run the program and write the ecuation as an argument in quotes.
+
+```
+~/src$ ./a.out "cos(arctg(50x^3*e)) / log10(ln(-7*pi))"
+```
+
+The translator works only with one parameter and doesnt do any operation. 
