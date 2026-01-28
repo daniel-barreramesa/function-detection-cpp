@@ -21,7 +21,7 @@ std::string transalate(std::string ecuation){
     if(ecuation[i] == '1' || ecuation[i] == '2' || ecuation[i] == '3' || ecuation[i] == '4' || ecuation[i] == '5' || ecuation[i] == '6' || ecuation[i] == '7' || ecuation[i] == '8' || ecuation[i] == '9' || ecuation[i] == '0')
       result.push_back(ecuation[i]); //push_back numbers
 
-    else if(ecuation[i] == '+' || ecuation[i] == '-' || ecuation[i] == '*' || ecuation[i] == '/' || ecuation[i] == '^' || ecuation[i] == '(' || ecuation[i] == ')' || ecuation[i] == 'x' || ecuation[i] == 'e')
+    else if(ecuation[i] == '+' || ecuation[i] == '-' || ecuation[i] == '*' || ecuation[i] == '/' || ecuation[i] == '^' || ecuation[i] == '(' || ecuation[i] == ')' || ecuation[i] == 'x' || ecuation[i] == 'e' || ecuation[i] == '.')
       result.push_back(ecuation[i]); //push_back symbols
 
     else if(ecuation[i] == ' '){} //delete spaces

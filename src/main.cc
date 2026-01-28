@@ -13,6 +13,7 @@
 #include<string>
 
 #include"function_detection.cc"
+#include"solve.cc"
 
 int main(int argc, char *argv[]){
   if(argc == 1){
@@ -28,6 +29,15 @@ int main(int argc, char *argv[]){
   }
 
   if(argc == 3){
+  std::string function = argv[1];
+  std::string command = argv[2];
+  if (command == "-solve"){
+    int a = detect_x(function);
+    if(a == 1)
+      return 1;
+    std::string ecuation = transalate(function); //uses the Transalate system to be easier to solve
+    double result = solve(ecuation);
+    }
   return 0;
   }
   return 0;
