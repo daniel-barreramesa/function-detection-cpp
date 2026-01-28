@@ -53,6 +53,7 @@ To use the translator run the program and write the ecuation as an argument in q
 
 The translator works only with one parameter and doesnt do any operation. 
 
+
 ## The solver
 
 This system uses the translator to perform operations. It follows the following order of mathematical ecuations: Parentheses - Funcitons - Powers - Products - Sumatory
