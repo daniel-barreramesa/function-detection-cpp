@@ -79,6 +79,8 @@ To use the solver run the program and write the ecuation as an argument in quote
 
 The ecuation may not contain x (unknown variables), we want it to return a number.
 
+
+
 > Each system (translator and solver) are contained in one function.
 > For the translator is the function translate(string) in the archive
 > function_detection.cc
