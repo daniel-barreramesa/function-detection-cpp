@@ -1,4 +1,4 @@
 #include<iostream>
 
-const double pi = 3.141592;
-const double e = 2.71828;
+const double kp = 3.141592;
+const double ke = 2.71828;
