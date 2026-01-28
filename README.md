@@ -16,6 +16,7 @@ The goal of this system is to convert human readable mathematical functions into
 "c(T(50x^3*e))/L10(l(-7*p))"
 ```
 
+
 This is the list of translations performed by the program:
 | Function | Code | Description |
 | ------ | ------ |------------ |
@@ -51,3 +52,28 @@ To use the translator run the program and write the ecuation as an argument in q
 ```
 
 The translator works only with one parameter and doesnt do any operation. 
+
+## The solver
+
+This system uses the translator to perform operations. It follows the following order of mathematical ecuations: Parentheses - Funcitons - Powers - Products - Sumatory
+
+### Instructions to use the solver:
+
+Copy the repository to your local machine. 
+```
+~/$ git clone git@github.com:/daniel-barreramesa/function-detection-cpp.git
+```
+
+Enter the src/ directory and compile the program
+
+```
+~/src$ g++ main.cc
+```
+
+To use the solver run the program and write the ecuation as an argument in quotes and the command -solve as second argument.
+
+```
+~/src$ ./a.out "cos(arctg(5.8^3*e)) / log10(ln(-7*pi))" -solve
+```
+
+The ecuation may not contain x (unknown variables), we want it to return a number.
