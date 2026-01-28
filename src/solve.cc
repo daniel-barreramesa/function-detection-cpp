@@ -22,8 +22,7 @@ double solve_parentheses(std::string ecuation){
   int tam = ecuation.size();
 
   for(int i{0}; i<tam ; ++i){ //RECORRE LA ECUACION EN BUSCA DE PARENTESIS Y RESUELVE LOS PARENTESIS PRIMERO
-    if(ecuation[i] == ')'){
-    }
+    //QUIERO QUE SE RESUELVAN LOS PARENTESIS DEL MAS PEQUEÑO AL MAS GRANDE
   }//close for
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }

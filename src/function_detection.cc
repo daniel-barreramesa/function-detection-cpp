@@ -3,7 +3,10 @@
 #include<cmath>
 #include "functions.h"
 
-
+/*
+* THIS IS THE TRANSLATE ALGORITHM. 
+*/
+//#########################################################################################################
 
 std::string transalate(std::string ecuation){
   int lenght = ecuation.size();
