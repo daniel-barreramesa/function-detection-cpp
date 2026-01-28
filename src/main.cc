@@ -23,7 +23,8 @@ int main(int argc, char *argv[]){
 
   if(argc == 2){
     std::string ecuation = argv[1];
-    detect(ecuation);
+    std::string result = transalate(ecuation);
+    std::cout << result << std::endl;
     return 0;
   }
 

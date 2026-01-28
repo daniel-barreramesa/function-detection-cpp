@@ -2,7 +2,7 @@
 #include<string>
 #include<cmath>
 
-std::string detect(std::string ecuation);
+std::string transalate(std::string ecuation);
 
 int detect_x(std::string ecuation);
 void solve_parentheses(std::string ecuation);
