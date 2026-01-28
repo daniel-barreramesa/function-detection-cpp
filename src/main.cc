@@ -11,7 +11,6 @@
 **/
 #include<iostream>
 #include<string>
-#include<cmath>
 
 #include"function_detection.cc"
 
