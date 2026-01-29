@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<vector>
 #include<cmath>
 #include "functions.h"
 
@@ -20,9 +21,12 @@ int detect_x(std::string ecuation){ //search x in the ecuation
 //#########################################################################################################
 double solve_parentheses(std::string ecuation){
   int tam = ecuation.size();
+  std::string secondec;
+  std::vector<std::string> parentheses;
 
-  for(int i{0}; i<tam ; ++i){ //RECORRE LA ECUACION EN BUSCA DE PARENTESIS Y RESUELVE LOS PARENTESIS PRIMERO
-    //QUIERO QUE SE RESUELVAN LOS PARENTESIS DEL MAS PEQUEÑO AL MAS GRANDE
+  for(int i{0}; i<tam ; ++i){ 
+    if(ecuation[i] == ')'){
+    }
   }//close for
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }
@@ -48,7 +52,7 @@ double solve_sum(std::string ecuation){
 }
 
 double solve_num(std::string ecuation){
-  double result;
+  double result{0};
   //BUSCAMOS NUMEROS DENTRO DE LA STRING Y LOS TRANSFORMASMOS DE STRING A DOUBLE
   return result;
 }
