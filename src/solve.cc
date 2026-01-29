@@ -36,6 +36,7 @@ double solve_parentheses(std::string ecuation){
         secondec.push_back(ecuation[j]);
         j++;
       }
+      parentheses.pop_back();
       std::cout << secondec << std::endl;
       secondec = "";
     }
