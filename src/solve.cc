@@ -20,13 +20,27 @@ int detect_x(std::string ecuation){ //search x in the ecuation
 */
 //#########################################################################################################
 double solve_parentheses(std::string ecuation){
-  int tam = ecuation.size();
+  int j, tam = ecuation.size();
+  char a;
   std::string secondec;
-  std::vector<std::string> parentheses;
+  std::vector<int> parentheses;
 
-  for(int i{0}; i<tam ; ++i){ 
+  for(int i{tam-1}; i>=0 ; --i){ //Reversed for bucle
     if(ecuation[i] == ')'){
+      parentheses.push_back(i);
     }
+
+    if(ecuation[i] == '('){
+      j = i;
+      while (j != parentheses.back()){
+        secondec.push_back(ecuation[j]);
+        j++;
+      }
+      std::cout << secondec << std::endl;
+      secondec = "";
+    }
+
+    
   }//close for
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }
