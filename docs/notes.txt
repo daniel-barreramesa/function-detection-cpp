@@ -5,3 +5,7 @@ un core dumped.
 Voy a crear una función que me recorra el vector donde tengo guardados los paréntesis y si el mas pequeño está compuesto solo 
 por números significa que ya no queda nada que resolver ahi, por lo que salta al siguiente mas pequeño y asísucesivamente hasta 
 resolver todos los paréntesis.
+
+
+Ahora search_minpos() devuelve la posición en el verctor de la ecuacion mas pequeña sin resolver. Si todos los paréntesis están
+resueltos devuelve -1.

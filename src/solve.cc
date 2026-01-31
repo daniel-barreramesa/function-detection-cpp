@@ -45,18 +45,9 @@ double solve_parentheses(std::string ecuation){
     }
   }//close for
   //Now, in the vector ecuation_parts we have the contents of the parentheses
+
   int minpos = search_minpos(ecuation_parts);
   std::cout << "The position of the min: " << minpos << std::endl;
-
-/*
-  for(int i{0}; i<ecuation_parts[minpos].size(); ++i){ //look if the min ecuation is already solved
-    if(ecuation_parts[minpos][i] != '0' || ecuation_parts[minpos][i] != '1' || ecuation_parts[minpos][i] != '2' || ecuation_parts[minpos][i] != '3' || ecuation_parts[minpos][i] != '4' || ecuation_parts[minpos][i] != '5' || ecuation_parts[minpos][i] != '6' || ecuation_parts[minpos][i] != '7' || ecuation_parts[minpos][i] != '8' || ecuation_parts[minpos][i] != '9' ){
-      solve(ecuation_parts[minpos]);
-    }
-    else
-      ecuation_parts.erase(ecuation_parts.begin() + minpos);
-  }
-*/
 
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }

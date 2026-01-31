@@ -105,3 +105,31 @@ double solve_parentheses(std::string ecuation){
   std::cout << minpos << std::endl;
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }
+
+  //#######################################################################################################
+int search_minpos(std::vector<std::string> ecuation_parts){ //search the position of the min unresolved ecuation
+  if (ecuation_parts.empty()){
+    return -1;
+  }
+  else{
+  int vectam = ecuation_parts.size();
+  int mintam{999999999}, minpos{0};
+  for(int i{0}; i<vectam ; ++i){ 
+    if(mintam > ecuation_parts[i].size()){
+      mintam = ecuation_parts[i].size(); 
+      minpos = i;
+      }
+  }
+  
+  for(int i{0}; i<ecuation_parts[minpos].size(); ++i){ //look if the min ecuation is already solved
+    if(ecuation_parts[minpos][i] == '0' || ecuation_parts[minpos][i] == '1' || ecuation_parts[minpos][i] == '2' || ecuation_parts[minpos][i] == '3' || ecuation_parts[minpos][i] == '4' || ecuation_parts[minpos][i] == '5' || ecuation_parts[minpos][i] == '6' || ecuation_parts[minpos][i] == '7' || ecuation_parts[minpos][i] == '8' || ecuation_parts[minpos][i] == '9' ){
+      ecuation_parts.erase(ecuation_parts.begin() + minpos);
+      return search_minpos(ecuation_parts);
+    }
+    else{
+      return minpos;
+    }
+  }
+  return minpos;
+  }
+}
