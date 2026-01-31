@@ -36,14 +36,23 @@ double solve_parentheses(std::string ecuation){
         secondec.push_back(ecuation[j]);
         j++;
       }
-      parentheses.pop_back();
+      parentheses.pop_back(); //remove the last position saved in the vector
       std::cout << secondec << std::endl;
       ecuation_parts.push_back(secondec);
-      secondec = "";
+      secondec = ""; //clean the string
     }
-
-    
   }//close for
+  //Now, in the vector ecuation_parts we have the contents of the parentheses
+  int vectam = ecuation_parts.size();
+  int mintam{999999999}, minpos;
+  for(int i{0}; i<vectam ; ++i){
+    if(mintam > ecuation_parts[i].size()){ //if the previous min size is bigger than the new size
+      mintam = ecuation_parts[i].size(); //the min size is this new size
+      minpos = i; //the position of the min string is this new position
+      }
+  }//close for
+  //Now, the position in the vector where is the smallest string is minpos
+  std::cout << minpos << std::endl;
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }
 
