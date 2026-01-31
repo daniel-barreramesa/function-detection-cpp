@@ -1,0 +1,7 @@
+En la función resolver paréntesis hay varias cosas a resolver. Primero debe buscar paréntesis, si no hay, no que no se ejecute
+la función. Cuando unos paréntesis se ponen al revés )(, el bucle while camina hacia atrás sin hallar un '(', por lo que salta
+un core dumped. 
+
+Voy a crear una función que me recorra el vector donde tengo guardados los paréntesis y si el mas pequeño está compuesto solo 
+por números significa que ya no queda nada que resolver ahi, por lo que salta al siguiente mas pequeño y asísucesivamente hasta 
+resolver todos los paréntesis.

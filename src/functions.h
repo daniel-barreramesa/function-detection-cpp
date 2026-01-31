@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<cmath>
+#include<vector>
 
 std::string transalate(std::string ecuation);
 
@@ -13,3 +13,5 @@ double solve_powers(std::string ecuation);
 double solve_products(std::string ecuation);
 double solve_sum(std::string ecuation);
 double solve_num(std::string ecuation);
+
+int search_minpos(std::vector<std::string> ecuation_parts);
