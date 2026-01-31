@@ -6,6 +6,7 @@ std::string transalate(std::string ecuation);
 
 int detect_x(std::string ecuation);
 
+std::string second_solve(std::string ecuation);
 double solve(std::string ecuation);
 double solve_parentheses(std::string ecuation);
 double solve_functions(std::string ecuation);

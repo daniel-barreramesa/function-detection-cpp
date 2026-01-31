@@ -47,8 +47,14 @@ double solve_parentheses(std::string ecuation){
   //Now, in the vector ecuation_parts we have the contents of the parentheses
 
   int minpos = search_minpos(ecuation_parts);
+  if(minpos != -1){
+    ecuation.replace(ecuation.find(ecuation_parts[minpos]), ecuation_parts[minpos].length(), second_solve(ecuation_parts[minpos])); //replace the solved ecuation to the original
+    ecuation_parts[minpos] = second_solve(ecuation_parts[minpos]); //solve the min and replaces it as a string
+    std::cout << "the ecuation: " << ecuation << std::endl;
+    return solve_parentheses(ecuation);
+  } //close if
   std::cout << "The position of the min: " << minpos << std::endl;
-
+  std::cout << "the ecuation is: " << ecuation << std::endl;
   return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
 }
 
@@ -83,4 +89,8 @@ double solve_num(std::string ecuation){
 double solve(std::string ecuation){ //This is the solve function
   double result = solve_parentheses(ecuation);
   return result;
+}
+
+std::string second_solve(std::string ecuation){
+  return "123";
 }
