@@ -9,3 +9,7 @@ resolver todos los paréntesis.
 
 Ahora search_minpos() devuelve la posición en el verctor de la ecuacion mas pequeña sin resolver. Si todos los paréntesis están
 resueltos devuelve -1.
+
+La funcion solve_parentheses() separa el contenido de cada parentesis en un vector, busca el menor de ellos que no esté resuelto,
+lo resuelve y lo reemplaza en la ecuacion original y se vuelve a llamar a si misma hasta que minpos sea igual a -1, lo que
+significa que ya todos los parentesis están resueltos.

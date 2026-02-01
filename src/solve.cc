@@ -21,7 +21,7 @@ int detect_x(std::string ecuation){ //search x in the ecuation
 * THIS IS THE SOLVE ALGORITHM. 
 */
 //#########################################################################################################
-double solve_parentheses(std::string ecuation){
+std::string solve_parentheses(std::string ecuation){
   int j, tam = ecuation.size();
   std::string secondec; 
   std::vector<int> parentheses;
@@ -55,42 +55,63 @@ double solve_parentheses(std::string ecuation){
   } //close if
   std::cout << "The position of the min: " << minpos << std::endl;
   std::cout << "the ecuation is: " << ecuation << std::endl;
-  return solve_functions(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS ECUACIONES
+  return second_solve(ecuation); //UNA VEZ RESUELTOS LOS PARENTESIS RESOLVEMOS LAS FUNCIONES
 }
 
-double solve_functions(std::string ecuation){
+std::string solve_functions(std::string ecuation){
   //BUSCAMOS FUNCIONES POR SU CODIGO Y RESOLVEMOS LO DE DENTRO
+  int j;
+  std::string secondec;
+  double result;
+  for(int i{0}; i<ecuation.size(); ++i){
+    if(ecuation[i] == 'l'){
+      j = i+2;
+      while (ecuation[j] != ')'){
+        secondec.push_back(ecuation[j]);
+        j++;
+      }
+      result = log(std::stod(secondec));
+      ecuation.replace(ecuation.find(secondec)-2, secondec.size()+3, std::to_string(result));
+    }
+  }
+  std::cout << "----------------\n" << ecuation << std::endl;
   return solve_powers(ecuation); //UNA VEZ RESUELTAS LAS FUNCIONES RESOLVEMOS LAS POTENCIAS
 }
 
-double solve_powers(std::string ecuation){
+std::string solve_powers(std::string ecuation){
   //BUSCAMOS PORENCIAS ^ Y LAS RESOLVEMOS
   return solve_products(ecuation); //UNA VEZ RESUELTAS LAS POTENCIAS RESOLVEMOS LAS * Y /
 }
 
-double solve_products(std::string ecuation){
+std::string solve_products(std::string ecuation){
   //BUSCAMOS * Y / Y LAS RESOLVEMOS
   return solve_sum(ecuation); //UNA VEZ RESUELTAS LAS POTENCIAS RESOLVEMOS SUMAS Y RESTAS
 }
 
-double solve_sum(std::string ecuation){
+std::string solve_sum(std::string ecuation){
   //BUSCAMOS + Y - Y LAS RESOLVEMOS
   return solve_num(ecuation);
 }
 
-double solve_num(std::string ecuation){
-  double result{0};
+std::string solve_num(std::string ecuation){
+  std::string result{""};
   //BUSCAMOS NUMEROS DENTRO DE LA STRING Y LOS TRANSFORMASMOS DE STRING A DOUBLE
   return result;
 }
 //#########################################################################################################
 
 
-double solve(std::string ecuation){ //This is the solve function
-  double result = solve_parentheses(ecuation);
-  return result;
+double return_num(std::string ecuation){
+  ecuation = "123";
+  return std::stod(ecuation);
 }
 
-std::string second_solve(std::string ecuation){
-  return "123";
+double solve(std::string ecuation){ //This is the solve function
+  std::string result = solve_parentheses(ecuation);
+  return return_num(result);
 }
+
+std::string second_solve(std::string ecuation){ 
+  return solve_functions(ecuation);
+}
+
